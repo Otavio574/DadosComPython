@@ -8,7 +8,7 @@ def saque(saldo, valor, num_saques, limite):
     if saldo < valor:
         print("Saldo insuficiente para realizar a transação")
     
-    elif valor > 500:
+    elif valor > limite:
         print("Valor máximo permitido de R$ 500,00")
     
     elif num_saques > LIMITE_SAQUES:
@@ -18,6 +18,8 @@ def saque(saldo, valor, num_saques, limite):
         saldo -= valor
     
     return saldo
+
+
 menu = """
 
 [d] Depositar
